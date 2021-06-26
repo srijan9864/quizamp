@@ -58,7 +58,7 @@ sap.ui.define([
 				if (!this.oSubmitDialog) {
 					this.oSubmitDialog = new Dialog({
 						type: DialogType.Message,
-						title: "Confirm",
+						title: "Name",
 						content: [
 							new Label({
 								text: "Please Enter Your Name",
