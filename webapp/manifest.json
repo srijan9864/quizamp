@@ -77,8 +77,13 @@
       "routes": [
         {
           "name": "RouteMain",
-          "pattern": "RouteMain",
-          "target": ["TargetMain"]
+          "pattern": "",
+          "target": "TargetMain"
+        },
+        {
+          "name": "QuizPage",
+          "pattern": "QuizPage",
+          "target": "TargetQuiz"
         }
       ],
       "targets": {
@@ -86,9 +91,16 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Main",
-          "viewName": "Main"
-        }
+          "viewName": "Main",
+          "viewLevel": 1
+        },
+        "TargetQuiz": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewName": "Quiz",
+          "viewLevel": 2
+        } 
       }
     }
   }

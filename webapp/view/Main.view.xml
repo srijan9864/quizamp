@@ -1,43 +1,40 @@
-<mvc:View
-    controllerName="sap.quizamp.quizamp.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-    displayBlock="true"
-    xmlns="sap.m"
+<mvc:View controllerName="sap.quizamp.quizamp.controller.Main"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" displayBlock="true"
+	xmlns="sap.m"
 	xmlns:f="sap.f"
 	xmlns:form="sap.ui.layout.form"
-	xmlns:l="sap.ui.layout"
->
+	xmlns:l="sap.ui.layout">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-						<content>
-							<FlexBox justifyContent="Center" alignItems="Start" >
-								<Panel  width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">	
-									<content>
-										<FlexBox alignItems="Start" >
-									<ComboBox class="sapUiResponsiveMargin" id = "category" items ="{ path : '/category'}" placeholder = "Category" >
-										<core:Item key = "{topic}" text="{topic}" />
-									</ComboBox>
-								</FlexBox>
-								<FlexBox alignItems="Start" >
-									<ComboBox  class="sapUiResponsiveMargin" id = "difficulty"  placeholder = "Difficulty" items ="{ path : '/difficulty'}">
-									<core:Item key = "{level}" text="{level}" />
-									</ComboBox>
-								</FlexBox>
-								<FlexBox alignItems="Start" >
-									<ComboBox  class="sapUiResponsiveMargin" id = "questions"  placeholder = "No. of Questions" items ="{ path : '/questions'}">
-										<core:Item key = "{number}" text="{number}" />
+					<content>
+						<FlexBox justifyContent="Center" alignItems="Start">
+							<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+								<content>
+									<FlexBox alignItems="Start">
+										<ComboBox class="sapUiResponsiveMargin" id = "category" items ="{ path : '/category'}" placeholder = "Category">
+											<core:Item key = "{topic}" text="{topic}" />
+										</ComboBox>
+									</FlexBox>
+									<FlexBox alignItems="Start">
+										<ComboBox class="sapUiResponsiveMargin" id = "difficulty"  placeholder = "Difficulty" items ="{ path : '/difficulty'}">
+											<core:Item key = "{level}" text="{level}" />
+										</ComboBox>
+									</FlexBox>
+									<FlexBox alignItems="Start">
+										<ComboBox class="sapUiResponsiveMargin" id = "questions"  placeholder = "No. of Questions" items ="{ path : '/questions'}">
+											<core:Item key = "{number}" text="{number}" />
 										</ComboBox>
 									</FlexBox>
 								</content>
-								</Panel>								
-								</FlexBox>
-								<FlexBox justifyContent="Center" alignItems="Start" >
-									<Button type ="Accept" text="Start?" press="onBtnPress"></Button>	
-									</FlexBox>
-						</content>
+							</Panel>
+						</FlexBox>
+						<FlexBox justifyContent="Center" alignItems="Start">
+							<Button type ="Accept" text="Start?" press="onBtnPress"></Button>
+						</FlexBox>
+					</content>
 				</Page>
 			</pages>
 		</App>

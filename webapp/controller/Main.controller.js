@@ -50,11 +50,10 @@ sap.ui.define([
 					]
 				}
 				oModel.setData(oData);
-				console.log(oModel);
 				this.getView().setModel(oModel);
 			},
-
-			onBtnPress: function() {
+			onBtnPress: function () {
+				var that = this;
 				if (!this.oSubmitDialog) {
 					this.oSubmitDialog = new Dialog({
 						type: DialogType.Message,
@@ -81,6 +80,8 @@ sap.ui.define([
 								var sText = Core.byId("submissionNote").getValue();
 								MessageToast.show("Starting Quiz for : " + sText);
 								this.oSubmitDialog.close();
+								var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+								oRouter.navTo("QuizPage");
 							}.bind(this)
 						}),
 						endButton: new Button({
@@ -91,8 +92,9 @@ sap.ui.define([
 						})
 					});
 				}
-	
+
 				this.oSubmitDialog.open();
 			}
+
 		});
 	});
